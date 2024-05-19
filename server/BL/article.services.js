@@ -20,7 +20,16 @@ export const getAllCategories = async () => {
     return uniqueCategory
 }
 
+export const getSelectedArticle = async (slug)=>{
+const article = await articleModel.findOne({slug:slug})
+return article
+}
+
+
 export {creatData, getData, getByOrdet}
+
+
+
 // const articles = [
 //     {
 //         mainTitle: "Why Cats Love Boxes",
@@ -476,7 +485,5 @@ export {creatData, getData, getByOrdet}
 //     console.log('😉');
 // }
 
-const getSelectedArticle =(articlId)=>{
 
-}
 
