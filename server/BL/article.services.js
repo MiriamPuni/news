@@ -1,5 +1,7 @@
+import { set } from 'mongoose';
 import articleModel from '../DL/article.model';
 import connectToMongo from '../DL/connectToMongo';
+import { getAllArticles } from '../DL/controllers/article.controller';
 const articles = [
     {
         mainTitle: "Why Cats Love Boxes",
@@ -445,13 +447,21 @@ const articles = [
 ];
 
 
-const creatData= (data)=> articleModel.create(data)
+const creatData = (data) => articleModel.create(data)
 
-export let luli = async()=>{
+export let luli = async () => {
     await connectToMongo()
-    articles.map(i=>creatData(i))
-    
+    articles.map(i => creatData(i))
     console.log('😉');
+}
+
+
+export const getAllCategories = async () => {
+    const all = await getAllArticles()
+    const categories = all.map(c => c.category)
+    const uniqueCategory = [...new Set(categories)]
+    console.log("F",uniqueCategory);
+    return uniqueCategory
 }
 
 
