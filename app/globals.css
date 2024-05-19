@@ -1,0 +1,13 @@
+a{
+    color: inherit;
+    text-decoration: none;
+  }
+.containerCartArticle{
+    width: 65%;
+    height: 50%;
+    background-color: burlywood;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
