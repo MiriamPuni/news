@@ -40,7 +40,11 @@ const articelSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    createDate: {
+    imgMain:{
+        type: String,
+        required: true,
+    },
+    createDate:{
         type: Date,
         default: Date.now,
         required: true,
