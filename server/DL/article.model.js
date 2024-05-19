@@ -1,42 +1,42 @@
 const mongoose = require('mongoose');
 
 const contentSchema = new mongoose.Schema({
-    type:{
+    type: {
         type: String,
         enum: ['title', 'text', 'img'],
         default: 'text',
         required: true,
     },
-    fill:{
+    fill: {
         type: String,
         required: true,
     }
 })
 const commentsSchema = new mongoose.Schema({
-    content:{
+    content: {
         type: String,
         required: true,
     },
-    title:{
+    title: {
         type: String,
         required: true,
     },
-    user:{
-        type : mongoose.Schema.Types.ObjectId,
-        ref : "user"
+    user: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "user"
     },
-    date:{
+    date: {
         type: Date,
         default: Date.now
     }
 
 })
 const articelSchema = new mongoose.Schema({
-    mainTitle:{
+    mainTitle: {
         type: String,
         required: true,
     },
-    subTitle:{
+    subTitle: {
         type: String,
         required: true,
     },
@@ -49,29 +49,34 @@ const articelSchema = new mongoose.Schema({
         default: Date.now,
         required: true,
     },
-    writer:{
+    writer: {
         type: String,
         required: true,
     },
-    category:{
+    category: {
         type: String,
         required: true,
     },
-    content:[{
+    categoryId: {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Category'
+    },
+    content: [{
         contentSchema
     }],
-    slug:{
+    slug: {
         type: String,
         required: true,
         unique: true,
     },
-    views:{
+    views: {
         type: Number,
         default: 0
     },
-    comments:{ commentsSchema}
+    comments: { commentsSchema }
 });
 
-const articleModel = mongoose.models.Article || mongoose.model('Article', articelSchema);
 
+const articleModel = mongoose.models?.Article || mongoose.model('Article', articelSchema);
+console.log({articleModel})
 export default articleModel
