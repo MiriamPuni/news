@@ -1,5 +1,7 @@
+import { set } from 'mongoose';
 import articleModel from '../DL/article.model';
 import connectToMongo from '../DL/connectToMongo';
+
 // const articles = [
 //     {
 //         mainTitle: "Why Cats Love Boxes",
@@ -446,6 +448,9 @@ import connectToMongo from '../DL/connectToMongo';
 
 
 
+import { getAllArticles } from '../DL/controllers/article.controller';
+
+
 // const creatData= (data)=> articleModel.create(data)
 
 // export let luli = async()=>{
@@ -455,7 +460,23 @@ import connectToMongo from '../DL/connectToMongo';
 //     console.log('😉');
 // }
 
+const creatData = (data) => articleModel.create(data)
+
+const getData = ()=> articleModel.find()
+
+const getByOrdet = ()=> articleModel.find().sort( { createDate : -1 } ) 
+
+
 const getSelectedArticle =(articlId)=>{
 
 }
 
+export const getAllCategories = async () => {
+    const all = await getAllArticles()
+    const categories = all.map(c => c.category)
+    const uniqueCategory = [...new Set(categories)]
+    console.log("F",uniqueCategory);
+    return uniqueCategory
+}
+
+export {creatData, getData, getByOrdet}

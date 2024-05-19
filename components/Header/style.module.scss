@@ -1,0 +1,20 @@
+.Header {
+    background-color: var(--main-color);
+    width: 100vw;
+    height: 70px;
+    position: fixed;
+}
+.img{
+    position: absolute;
+    width: 100px;
+    top: -25px;
+    right: 10px;
+    margin-left: auto;
+}
+.cat{
+    width: 75%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 18px;
+}
