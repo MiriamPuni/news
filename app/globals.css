@@ -3,6 +3,12 @@
     height: 100%;
     /* width: 65%; */
     /* height: 50%; */
+ul {
+    list-style: none;
+  }
+  .containerCartArticle{
+    width: 65%;
+    height: 50%;
     background-color: burlywood;
     display: flex;
     flex-wrap: wrap;
@@ -37,3 +43,4 @@ a {
 :root{
     --main-color: rgb(13, 13, 81)
 }
+
