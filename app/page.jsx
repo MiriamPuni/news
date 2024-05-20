@@ -1,9 +1,9 @@
 import React from 'react'
-import Tehilla from '@/components/Tehilla'
+import Mivzakim from '@/components/Mivzakim'
 export default function page() {
   return (
     <div>
-      <Tehilla/>
+      <Mivzakim/>
     </div>
   )
 }
