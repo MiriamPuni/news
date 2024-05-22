@@ -14,12 +14,12 @@ export default async function mivzakim() {
       <div className={styles.titel}>
         <img src="	https://www.now14.co.il/wp-content/themes/14-child/assets/icons/mivzakim-icon.svg
 " alt="mm" />
-        <h2>מבזקים</h2>
+        <h4>מבזקים</h4>
         </div>
       {data &&
         data?.map((news, index) => {
           return <div key={index}>
-            <h3>{news.title}</h3>
+            <h2>{news.title}</h2>
             <details>
 
               <summary>
