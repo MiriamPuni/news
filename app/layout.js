@@ -1,5 +1,5 @@
 import { Inter } from "next/font/google";
-import "./globals.css";
+import styles from "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Fotter";
 
@@ -14,10 +14,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header/>
-        {children}
-        <Footer/>
-        </body>
+        <Header />
+        <div style={{ marginLeft: "40px", marginRight: "40px" }}>
+          {children}
+        </div>
+        <Footer />
+      </body>
     </html>
   );
 }

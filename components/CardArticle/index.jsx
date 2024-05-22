@@ -7,8 +7,8 @@ export default function CardArticle({ mainTitle, imgMain, createDate, slug }) {
     <NavLink href={`/article/${slug}`} text={<div className={styles.container} >
       <Image
         src={imgMain}
-        width={170}
-        height={100}
+        width={220}
+        height={150}
       />
       {mainTitle}
       <br />
