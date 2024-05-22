@@ -3,6 +3,7 @@ import Link from 'next/link'
 import styles from './style.module.scss'
 import connectToMongo from '@/server/DL/connectToMongo';
 import HeaderList from '../HeaderList';
+import Search from '../Search';
 
 export default async function Header() {
   await connectToMongo()
@@ -12,6 +13,7 @@ export default async function Header() {
     <>
     <div className={styles.Header}>
       <div className={styles.cat}>
+        <Search/>
      {categories.map((category, index) => (
        <HeaderList category={category} index={index}/>
       ))}
