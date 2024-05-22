@@ -476,6 +476,9 @@ export {creatData, getData, getByOrdet}
 
 
 
+// import { getAllArticles } from '../DL/controllers/article.controller';
+
+
 // const creatData= (data)=> articleModel.create(data)
 
 // export let luli = async()=>{
