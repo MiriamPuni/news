@@ -20,8 +20,8 @@ return (
             <Link href={`/${art.slug}`}>
               <div className={styles.imageContainer}>
                 <Image
-                  width={500}
-                  height={300}
+                  width={400}
+                  height={200}
                   src={art.imgMain}
                   alt={art.mainTitle}
                   className={styles.cardImage}
