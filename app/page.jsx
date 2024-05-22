@@ -34,6 +34,3 @@ export default async function page() {
     </div>
   )
 }
-// width: 100%
-// maxWidth: 1000px
-// margin auto
