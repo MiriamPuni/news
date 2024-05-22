@@ -13,7 +13,8 @@ export default async function page() {
   console.log('🥳',new Date(data[0].createDate).getHours());
   return (
     <div className='container'>
-      <div style={{width:'100%', height:'300px', backgroundColor:'InactiveCaptionText'}}></div>
+      <div style={{width:'100%', height:'300px', backgroundColor:'InactiveCaptionText'}}>      <Mivzakim/>
+</div>
       <div style={{display:'flex'}}>
 <div style={{width:'30%', height:'500px', backgroundColor:'blue'}}></div>
       <div className='containerCartArticle'>

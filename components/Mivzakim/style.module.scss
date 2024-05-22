@@ -1,163 +1,152 @@
 .container {
   background-color: #f5efe0;
   max-width: 530px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   margin-top: 15px;
   padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    direction: rtl;
-    gap: 20px;
-    border-top-right-radius: 8%;
-    border-top-left-radius: 8%;
-    direction: rtl;
-    overflow: hidden;
-    height: 300px; 
-    position: relative;
-    width: 300px;
-  
-    &>.title {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      gap: 10px;
-  
-      img {
-        max-width: 12rem;
-        height: auto;
-      }
-    }
-  }
-  
-  .tickerWrapper {
-    overflow: hidden;
-    height: 300px;
-    width: 300px;
-    gap: 10px;
-    background-color: #f5efe0;
-    display: flex;
-    flex-direction: column;
-    
-  }
-  
-  .ticker {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  direction: rtl;
+  gap: 20px;
+  border-top-right-radius: 8%;
+  border-top-left-radius: 8%;
+  direction: rtl;
+  overflow: hidden;
+  max-height: 530px;
+  position: relative;
+  // width: 300px;
 
-    animation: tickerMove 18s linear infinite; 
-  }
-  
-  .tickerItem {
+  &>.title {
     display: flex;
-    flex-direction: column;
-    // padding-inline: 10px;
-    border-bottom: 1px dashed #D9D9D9;
-    padding-bottom: 8px;
-    direction: rtl;
-  
-    font-size: medium;
-  }
-  
-  @keyframes tickerMove {
-    0% {
-      transform: translateY(0);
-    }
-    11.11% {
-      transform: translateY(-20px);
-    }
-    22.22% {
-      transform: translateY(-40px);
-    }
-    33.33% {
-      transform: translateY(-60px);
-    }
-    44.44% {
-      transform: translateY(-80px);
-    }
-    55.55% {
-      transform: translateY(-100px);
-    }
-    66.66% {
-      transform: translateY(-120px);
-    }
-    77.77% {
-      transform: translateY(-140px);
-    }
-    88.88% {
-      transform: translateY(-160px);
-    }
-    100% {
-      transform: translateY(-180px); /* Add a final step for the complete turn */
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 10px;
+    border-bottom: #E30613 solid 5px;
+    border-radius: 20%;
+    font-size: xx-large;
+
+    img {
+      max-width: 13rem;
+      height: auto;
     }
   }
-  // .continer {
-      //     height: 40rem;
-      //     max-width: 530px;
-      //     margin-top: 15px;
-  //     padding: 1rem;
-  //     display: flex;
-  //     flex-direction: column;
-  //     // overflow-y: scroll;
-  //     gap: 20px;
-  //     border-top-right-radius: 8%;
-  //     border-top-left-radius: 8%;
-  //     overflow: hidden;
-  //     // height: 60px; /* Adjust this to the height of 3 items */
-  //     // width: 300px; /* Adjust width as needed */
-  //     position: relative;
-  
-  //     &>div {
-      //         border-bottom: 1px dashed #D9D9D9;
-  //         padding-bottom: 8px;
-  //     }
-  
-  //     &>img {
-      //         border-bottom: 1px dashed #D9D9D9
-      //     }
-  
-  //     &>.hedear {
-  //         display: flex;
-  //         flex-direction: row;
-  //         align-items: center;
-  //         justify-content: center;
-  //         gap: 10px;
-  
-  //         &>img {
-      //             max-width: 12rem;
-      //             height: auto
-      //         }
-  
-  //     }
-  // }
-  
-  // .ticker {
-  //     display: flex;
-  //     flex-direction: column;
-  //     position: absolute;
-  //     animation: tickerMove 9s linear infinite;
-  //   }
-  
-  // .ticker-item {
-      //     height: 20px; /* Adjust this to the height of each item */
-  //     line-height: 20px; /* Adjust this to align text vertically */
-  //     padding: 5px;
-  //     border-bottom: 1px dashed #D9D9D9;
-  //     padding-bottom: 8px;
-  //   }
-  //   @keyframes tickerMove {
-      //     0% { top: 0; }
-      //     11.11% { top: -20px; }
-      //     22.22% { top: -40px; }
-      //     33.33% { top: -60px; }
-      //     44.44% { top: -80px; }
-      //     55.55% { top: -100px; }
-      //     66.66% { top: -120px; }
-      //     77.77% { top: -140px; }
-      //     88.88% { top: -160px; }
-      //     // 100% { top: ; }
-      //   }
-      //   .titel{
-  //     display: flex;
-  //     flex-direction: row;
-  
-  //   }
+}
+
+.tickerWrapper {
+  overflow: hidden;
+
+  max-width: 500px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  gap: 10px;
+  background-color: #f5efe0;
+  display: flex;
+  flex-direction: column;
+  // position: absolute;
+
+}
+
+.ticker {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  animation: tickerMove 5 `0s linear infinite both;
+}
+
+
+.tickerItem {
+  display: flex;
+  flex-direction: column;
+  // padding-inline: 10px;
+  border-bottom: 1px dashed #D9D9D9;
+  padding-bottom: 8px;
+  direction: rtl;
+  font-weight: 600;
+  font-size: x-large;
+}
+
+
+@keyframes tickerMove {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-50%);
+    /* Adjust to total height of unique items */
+  }
+}
+
+// .continer {
+//     height: 40rem;
+//     max-width: 530px;
+//     margin-top: 15px;
+//     padding: 1rem;
+//     display: flex;
+//     flex-direction: column;
+//     // overflow-y: scroll;
+//     gap: 20px;
+//     border-top-right-radius: 8%;
+//     border-top-left-radius: 8%;
+//     overflow: hidden;
+//     // height: 60px; /* Adjust this to the height of 3 items */
+//     // width: 300px; /* Adjust width as needed */
+//     position: relative;
+
+//     &>div {
+//         border-bottom: 1px dashed #D9D9D9;
+//         padding-bottom: 8px;
+//     }
+
+//     &>img {
+//         border-bottom: 1px dashed #D9D9D9
+//     }
+
+//     &>.hedear {
+//         display: flex;
+//         flex-direction: row;
+//         align-items: center;
+//         justify-content: center;
+//         gap: 10px;
+
+//         &>img {
+//             max-width: 12rem;
+//             height: auto
+//         }
+
+//     }
+// }
+
+// .ticker {
+//     display: flex;
+//     flex-direction: column;
+//     position: absolute;
+//     animation: tickerMove 9s linear infinite;
+//   }
+
+// .ticker-item {
+//     height: 20px; /* Adjust this to the height of each item */
+//     line-height: 20px; /* Adjust this to align text vertically */
+//     padding: 5px;
+//     border-bottom: 1px dashed #D9D9D9;
+//     padding-bottom: 8px;
+//   }
+//   @keyframes tickerMove {
+//     0% { top: 0; }
+//     11.11% { top: -20px; }
+//     22.22% { top: -40px; }
+//     33.33% { top: -60px; }
+//     44.44% { top: -80px; }
+//     55.55% { top: -100px; }
+//     66.66% { top: -120px; }
+//     77.77% { top: -140px; }
+//     88.88% { top: -160px; }
+//     // 100% { top: ; }
+//   }
+//   .titel{
+//     display: flex;
+//     flex-direction: row;
+
+//   }
