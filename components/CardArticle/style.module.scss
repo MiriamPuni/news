@@ -1,14 +1,45 @@
 .container {
-    width: 220px;
-    height: 210px;
+    width: 200px;
+    height: auto;
     // border: 1.5px solid black;
-    margin: 5px;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
 
-    &> img {
-        object-fit: cover ;
-        // max-width: 100%;
-        // max-height: 100%;
+
+    &>img {
+        object-fit: cover;
     }
+
+    &>:hover {
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+
+    }
+}
+
+.cardImage {
+    width: 200px;
+    height: 150px;
+    //     object-fit: cover;
+    //     transition: transform 0.3s ease-in-out;
+}
+
+.cardContent {
+    padding: 1rem;
+}
+
+.cardTitle {
+    font-size: 1rem;
+    text-align: center;
+    // margin-bottom: 0.5rem;
+}
+
+.cardDescription {
+    color: #666;
+    font-size: 12px;
+    padding-top: 5px;
+    display: flex;
+    justify-content: end;
 }

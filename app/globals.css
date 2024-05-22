@@ -1,18 +1,29 @@
 .container {
     width: 100%;
     height: 100%;
+    display: flex;
+    /* border: 2px solid firebrick; */
+    padding-top: 70px;
+
+}
+
+.mivzakim {
+    /* border: 2px solid firebrick; */
+    width: 25%;
+
 }
 
 .containerCartArticle {
-    margin: 10px;
     /* border: 2px solid firebrick; */
-    width: 80%;
-    height: 100%;
+    width: 75%;
     display: flex;
     flex-wrap: wrap;
+    margin: 5px;
+    justify-content: center;
+    /* 
+    height: 100%;
     direction: rtl;
-    justify-content: right;
-    font-size: 13px;
+    font-size: 13px; */
 }
 
 * {
