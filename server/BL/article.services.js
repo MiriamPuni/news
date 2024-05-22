@@ -36,4 +36,6 @@ export const filterArticle = async(search) => {
   });
   console.log("===res===", {res});
 return res}
+
+
 export {creatData, getData, getByOrdet}
