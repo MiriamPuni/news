@@ -13,18 +13,22 @@
   border-top-left-radius: 8%;
   direction: rtl;
   overflow: hidden;
-  height: 300px;
+  max-height: 530px;
   position: relative;
-  width: 300px;
+  // width: 300px;
 
   &>.title {
     display: flex;
     flex-direction: row;
     align-items: center;
-    gap: 10px;
+    gap: 20px;
+    padding-bottom: 10px;
+    border-bottom: #E30613 solid 5px;
+    border-radius: 20%;
+    font-size: xx-large;
 
     img {
-      max-width: 12rem;
+      max-width: 13rem;
       height: auto;
     }
   }
@@ -32,8 +36,10 @@
 
 .tickerWrapper {
   overflow: hidden;
-  height: 300px;
-  width: 300px;
+
+  max-width: 500px;
+  width: 100%;
+  aspect-ratio: 1 / 1;
   gap: 10px;
   background-color: #f5efe0;
   display: flex;
@@ -46,8 +52,9 @@
   flex-direction: column;
   gap: 10px;
 
-  animation: tickerMove 18s linear infinite;
+  animation: tickerMove 50s linear infinite both;
 }
+
 
 .tickerItem {
   display: flex;
