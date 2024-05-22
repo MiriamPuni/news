@@ -5,6 +5,7 @@ import Image from 'next/image';
 import React from 'react'
 import Footer from '@/components/Fotter'
 import Header from '@/components/Header'
+import Mivzakim from '@/components/Mivzakim';
 
 export default async function page() {
   await connectToMongo()
@@ -12,9 +13,10 @@ export default async function page() {
   console.log('🥳',new Date(data[0].createDate).getHours());
   return (
     <div className='container'>
-      <div style={{width:'100%', height:'300px', backgroundColor:'InactiveCaptionText'}}></div>
+      <div style={{width:'100%', height:'300px', backgroundColor:'InactiveCaptionText'}}>     
+</div>
       <div style={{display:'flex'}}>
-<div style={{width:'30%', height:'500px', backgroundColor:'blue'}}></div>
+ <Mivzakim/>
       <div className='containerCartArticle'>
 
       {data.map((d, i)=> <CardArticle
@@ -27,6 +29,3 @@ export default async function page() {
     </div>
   )
 }
-// width: 100%
-// maxWidth: 1000px
-// margin auto
