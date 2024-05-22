@@ -3,9 +3,9 @@ import styles from './style.module.scss'
 import { start } from '@/app/mivzakim/Mmm'
 import Image from 'next/image';
 export default async function index() {
-  console.log("35656)*&^%^&");
+  // console.log("35656)*&^%^&");
   const data = await start()
-  console.log("trr**********", data);
+  // console.log("trr**********", data);
   //navlink => text
   return (
     <div className={styles.container}>
