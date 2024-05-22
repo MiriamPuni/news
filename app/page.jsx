@@ -1,10 +1,7 @@
 import CardArticle from '@/components/CardArticle';
-import { getByOrdet, luli } from '@/server/BL/article.services';
+import { getByOrdet } from '@/server/BL/article.services';
 import connectToMongo from '@/server/DL/connectToMongo';
-import Image from 'next/image';
 import React from 'react'
-import Footer from '@/components/Fotter'
-import Header from '@/components/Header'
 import Mivzakim from '@/components/Mivzakim';
 
 export default async function page() {
