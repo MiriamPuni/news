@@ -14,12 +14,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
-        <div style={{ marginLeft: "40px", marginRight: "40px" }}>
-          {children}
+      <div className="wrapper">
+          <Header />
+          <div className="content">{children}</div>
+          <Footer />
         </div>
-        <Footer />
-      </body>
+        </body>
     </html>
   );
 }

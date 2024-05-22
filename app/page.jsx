@@ -13,13 +13,6 @@ export default async function page() {
   console.log('🥳', new Date(data[0].createDate).getHours());
   return (
     <div className='container'>
-      {/* <div style={{ width: '20%', height: '300px', backgroundColor: 'InactiveCaptionText' }}> */}
-      <div className='mivzakim'>
-        <Suspense fallback={<div>loading</div>}>
-          <Mivzakim />
-        </Suspense>
-      </div>
-      {/* </div> */}
       <div className='containerCartArticle'>
         {data.map((d, i) =>
           <div className='Cart'>
@@ -30,6 +23,11 @@ export default async function page() {
               createDate={'14/10/2003'} />
           </div>
         )}
+      </div>
+      <div className='mivzakim'>
+        <Suspense fallback={<div>loading</div>}>
+          <Mivzakim />
+        </Suspense>
       </div>
     </div>
   )

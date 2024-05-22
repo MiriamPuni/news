@@ -1,0 +1,103 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #f0f0f0;
+}
+
+.login,
+.signUp {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 1rem;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: right;
+  min-width: 320px;
+  // gap: 10px;
+  // max-width: 400px;
+  // width: 100%;
+
+  h3 {
+    margin-top: 0;
+    text-align: center;
+    padding-bottom: 8px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    input {
+      margin-bottom: 0.5rem;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      text-align: right;
+
+    }
+
+    .connect {
+      padding: 0.5rem;
+      border: none;
+      background-color: #007bff;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
+&:hover{
+  // font-size: 30px;
+
+}
+     
+    }
+  }
+
+  button {
+    background-color: transparent;
+    border: none;
+    color: #007bff;
+    cursor: pointer;
+    margin-top: 1rem;
+
+    &:hover {
+      text-decoration: underline;
+      // size: 30px;
+    }
+  }
+}
+
+.butt {
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.signUpButt {
+  background-color: transparent;
+  border: none;
+  color: #007bff;
+  margin-top: 1rem;
+
+  padding: 0.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+    size: 30px;
+  }
+}
+.containerTit{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: space-between;
+}
