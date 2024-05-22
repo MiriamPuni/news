@@ -19,11 +19,11 @@ export default async function index() {
       <div className={styles.ticker}>
       {data && [...data,...data].map((news, index) => (
             <div key={index} className={styles.tickerItem}>
-            <NavLink href='/mivzakim' text={news.title.includes('|') ? news.title.split('|')[0] : news.title}>  </NavLink><br />
+              <NavLink href='/mivzakim' text={news.title.includes('|') ? news.title.split('|')[0] : news.title}>  </NavLink><br />
               <time>{news.time}</time>
             </div>
           ))}
-      </div>
+        </div>
       </div>
 
     </div>
