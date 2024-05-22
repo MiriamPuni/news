@@ -78,5 +78,5 @@ const articelSchema = new mongoose.Schema({
 
 
 const articleModel = mongoose.models?.Article || mongoose.model('Article', articelSchema);
-console.log({articleModel})
+// console.log({articleModel})
 export default articleModel

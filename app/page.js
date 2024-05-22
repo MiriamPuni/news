@@ -5,6 +5,7 @@ import Image from 'next/image';
 import React from 'react'
 import Footer from '@/components/Fotter'
 import Header from '@/components/Header'
+import Mivzakim from '@/components/Mivzakim';
 
 export default async function page() {
   await connectToMongo()
