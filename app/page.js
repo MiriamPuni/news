@@ -12,6 +12,7 @@ export default async function page() {
   let data = await getByOrdet()
   console.log('🥳',new Date(data[0].createDate).getHours());
   return (
+    
     <div className='container'>
       <div style={{width:'100%', height:'300px', backgroundColor:'InactiveCaptionText'}}></div>
       <div style={{display:'flex'}}>

@@ -1,0 +1,21 @@
+.ArticlePage {
+  max-width: 400px;
+  padding: 8px;
+}
+.commentsArea {
+    background-color: bisque;
+  margin-top: 20px;
+  padding: 4px;
+  text-align: center;
+//   border: solid 1px black;
+  border-radius: 12px;
+  text-decoration: double;
+}
+.commentTitle {
+  text-align: start;
+}
+.commentUserName {
+  text-align: start;
+  margin-left: 12px;
+  color: gray;
+}

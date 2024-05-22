@@ -2,7 +2,7 @@ import { set } from 'mongoose';
 import articleModel from '../DL/article.model';
 import connectToMongo from '../DL/connectToMongo';
 
-import { getAllArticles } from '../DL/controllers/article.controller';
+import { getAllArticles,addComment,getArticleBySlug } from '../DL/controllers/article.controller';
 
 const creatData = (data) => articleModel.create(data)
 
@@ -20,9 +20,16 @@ export const getAllCategories = async () => {
     return uniqueCategory
 }
 
-export const getSelectedArticle = async (slug)=>{
-const article = await articleModel.findOne({slug:slug})
+export const getOneArticle = async (slug)=>{
+const article = await getArticleBySlug(slug)
 return article
+}
+
+export const addNewCommentServer = async (comment,slug)=>{
+    console.log('service1');
+    const newComment = await addComment(comment,slug)
+    console.log('service2');
+    return newComment
 }
 
 
