@@ -58,7 +58,7 @@ export default function Article({ params }) {
         {" "}
         {article.content.map((c) => {
           if (c.type == "text" || c.type == "title") {
-            console.log(c.fill);
+            // console.log(c.fill);
             return <div>{c.fill}</div>;
           } else if (c.type == "img") {
             return <img style={{ width: "400px" }} src={c.url} alt={c.type} />;
