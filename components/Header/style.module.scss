@@ -1,8 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+
 .Header {
     background-color: var(--main-color);
     width: 100vw;
     height: 70px;
     position: fixed;
+    font-family: "Heebo", sans-serif;
 }
 .img{
     position: absolute;
