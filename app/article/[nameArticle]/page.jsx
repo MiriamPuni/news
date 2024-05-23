@@ -1,6 +1,9 @@
 import connectToMongo from "@/server/DL/connectToMongo";
 import { comment } from "postcss";
 import styles from "./style.module.scss";
+import { Suspense } from "react";
+import Mivzakim from '@/components/Mivzakim';
+
 
 
 
@@ -47,39 +50,46 @@ export default function Article({ params }) {
 
   // getSelectedArticle({params})
   return (
-    <div className={styles.ArticlePage}>
-      <h1 className="mainTitle"> {article.mainTitle}</h1>
-      <h4 className="subTitle">{article.subTitle}</h4>
-      <span>
-        {" "}
-        published: {article.createDate} | by: {article.writer}
-      </span>
-      <div>
-        {" "}
-        {article.content.map((c) => {
-          if (c.type == "text" || c.type == "title") {
-            // console.log(c.fill);
-            return <div>{c.fill}</div>;
-          } else if (c.type == "img") {
-            return <img style={{ width: "400px" }} src={c.url} alt={c.type} />;
-          }
-        })}
+    <div className={styles.all}>
+      <div className={styles.ArticlePage}>
+        <h1 className={styles.mainTitle}>{article.mainTitle}</h1>
+        <h4 className={styles.subTitle}>{article.subTitle}</h4>
+        <div className={styles.published}>
+          {" "}
+          published: {article.createDate} | by: {article.writer}
+        </div>
+        <div className={styles.article1}>
+          {" "}
+          {article.content.map((c) => {
+            if (c.type == "text" || c.type == "title") {
+              // console.log(c.fill);
+              return <div>{c.fill}</div>;
+            } else if (c.type == "img") {
+              return <img className={styles.img} src={c.url} alt={c.type} />;
+            }
+          })}
+        </div>
+        <div className={styles.article2}>
+          {article.comments.map((comment, index) => {
+            return (
+              <ul className={styles.commentsArea}>
+                comments
+                <li>
+                  <h4>
+                    {index + 1}. {comment.title}
+                  </h4>
+                </li>
+                <li>name: {comment.user}</li>
+                <li>{comment.content}</li>
+              </ul>
+            );
+          })}
+        </div>
       </div>
-      <div>
-        {article.comments.map((comment, index) => {
-          return (
-            <ul className={styles.commentsArea}>
-              comments
-              <li>
-                <h4>
-                  {index + 1}. {comment.title}
-                </h4>
-              </li>
-              <li>name: {comment.user}</li>
-              <li>{comment.content}</li>
-            </ul>
-          );
-        })}
+      <div className={styles.mivzakim}>
+        <Suspense fallback={<div>loading</div>}>
+          <Mivzakim />
+        </Suspense>
       </div>
     </div>
   );
