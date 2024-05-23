@@ -21,8 +21,8 @@ const commentsSchema = new mongoose.Schema({
         type: String,
         required: true,
     },
-    user: {
-        type: mongoose.Schema.Types.ObjectId,
+    userName: {
+        type: String,
         ref: "user"
     },
     date: {
@@ -73,10 +73,10 @@ const articelSchema = new mongoose.Schema({
         type: Number,
         default: 0
     },
-    comments: { commentsSchema }
+    comments: [commentsSchema ]
 });
 
 
 const articleModel = mongoose.models?.Article || mongoose.model('Article', articelSchema);
-console.log({articleModel})
+// console.log({articleModel})
 export default articleModel

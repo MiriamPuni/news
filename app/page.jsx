@@ -1,5 +1,5 @@
 import CardArticle from '@/components/CardArticle';
-import { getByOrdet, luli } from '@/server/BL/article.services';
+import { getByOrdet } from '@/server/BL/article.services';
 import connectToMongo from '@/server/DL/connectToMongo';
 import Image from 'next/image';
 import React, { Suspense } from 'react'

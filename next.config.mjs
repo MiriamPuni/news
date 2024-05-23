@@ -28,6 +28,11 @@ const nextConfig = {
                 hostname: 'cdn.pixabay.com'
             },
             {
+                protocol: 'https',
+                hostname: 'a7.org',
+                pathname: '/files/pictures/**',
+              },
+            {
                 hostname: "www.now14.co.il"
             },
             {
