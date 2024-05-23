@@ -1,12 +1,12 @@
 import CardArticle from '@/components/CardArticle';
-import { getByOrdet, luli } from '@/server/BL/article.services';
+import { getByOrdet } from '@/server/BL/article.services';
 import connectToMongo from '@/server/DL/connectToMongo';
 import Image from 'next/image';
 import React, { Suspense } from 'react'
 import Footer from '@/components/Fotter'
-import Header from '@/components/Header'
+// import Uploading from '@/components/Uploading'
 import Mivzakim from '@/components/Mivzakim';
-
+import styles from './globals.scss'
 export default async function page() {
   await connectToMongo()
   let data = await getByOrdet()
