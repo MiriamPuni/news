@@ -3,28 +3,30 @@
 
 
 .container{
-    width: 100%;
-    height: 100%;
+    // width: 100%;
+    // height: 100%;
     display: flex;
     /* border: 2px solid firebrick; */
-    padding-top: 70px;
-    padding-bottom: 70px;
+    // padding-top: 70px;
+    // padding-bottom: 70px;
 
 }
 
 .mivzakim {
     /* border: 2px solid firebrick; */
-    width: 25%;
+    // width: 25%;
 
 }
 
 .containerCartArticle {
     /* border: 2px solid firebrick; */
-    width: 75%;
+    // width: 75%;
     display: flex;
     flex-wrap: wrap;
-    margin: 5px;
-    justify-content: center;
+    margin-top: 1rem;
+    // margin: 5px;
+    justify-content:     space-evenly
+    ;
     /* 
     height: 100%;
     direction: rtl;
@@ -45,7 +47,7 @@ body {
 
 .leyout {
 
-    margin: 40px;
+    // margin: 40px;
 
 }
 
@@ -62,7 +64,7 @@ a {
 body, html {
     margin: 0;
     padding: 0;
-    height: 100%;
+    // height: 100%;
   }
   
   .wrapper {

@@ -6,7 +6,7 @@ import React, { Suspense } from 'react'
 import Footer from '@/components/Fotter'
 // import Uploading from '@/components/Uploading'
 import Mivzakim from '@/components/Mivzakim';
-
+import styles from './globals.scss'
 export default async function page() {
   await connectToMongo()
   let data = await getByOrdet()
