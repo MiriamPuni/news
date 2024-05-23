@@ -1,7 +1,7 @@
 .Footer {
     background-color: var(--main-color);
     width: 100%;
-    height: 250px;
+    height: 200px;
     border-radius: 40px 40px 0 0;
     bottom: 0;
     display: flex;
@@ -10,7 +10,7 @@
 }
 
 .logofooter {
-    width: 300px;
+    width: 250px;
 }
 
 .titlefooter {
@@ -20,8 +20,9 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    margin-left: -50px;
-    margin-right: 50px;
+    margin-left: -120px;
+    margin-right: 200px;
+    font-size: 13px;
 }
 
 .title {

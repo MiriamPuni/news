@@ -1,23 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&display=swap');
+
 .Header {
     background-color: var(--main-color);
     width: 100vw;
-    height: 70px;
+    height: 60px;
     position: fixed;
+    font-family: "Heebo", sans-serif;
 }
-.img{
+
+.img {
     position: absolute;
-    width: 100px;
-    top: -25px;
+    width: 80px;
+    top: -20px;
     right: 10px;
     margin-left: auto;
 }
-.cat{
+
+.cat {
     width: 75%;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    font-size: 18px;
-}
-.headerPlaceholder {
-    height: 70px;
+    font-size: 15px;
 }
