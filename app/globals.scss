@@ -1,4 +1,6 @@
 
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 
 .container{
     width: 100%;
@@ -6,6 +8,7 @@
     display: flex;
     /* border: 2px solid firebrick; */
     padding-top: 70px;
+    padding-bottom: 70px;
 
 }
 
@@ -41,7 +44,9 @@ body {
 }
 
 .leyout {
+
     margin: 40px;
+
 }
 
 a {
@@ -49,7 +54,24 @@ a {
     text-decoration: none;
 }
 
-:root {
+
+
+:root{
     --main-color: rgb(13, 13, 81)
 }
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+  }
+  
+  .wrapper {
+    min-height: 100vh; /* Ensure the wrapper takes up the full viewport height */
+    display: flex;
+    flex-direction: column; /* Lay out the header, content, and footer vertically */
+  }
+  
+  .content {
+    flex: 1; /* Allow the content to grow and take up remaining space */
+  }
 
