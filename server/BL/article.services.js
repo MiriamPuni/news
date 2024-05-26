@@ -20,7 +20,6 @@ export const getAllCategories = async () => {
     const all = await getAllArticles()
     const categories = all.map(c => c.category)
     const uniqueCategory = [...new Set(categories)]
-    // console.log("F",uniqueCategory);
     return uniqueCategory
 }
 export const filterArticle = async(search) => {

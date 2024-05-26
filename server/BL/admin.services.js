@@ -1,4 +1,5 @@
-const { default: adminController } = require("../DL/controllers/admin.controller");
+// const { default: adminController } = require("../DL/controllers/admin.controller");
+import adminController from '@/server/DL/controllers/admin.controller'
 async function createNewAdmin(data){
     return await adminController.create(data)
 }
