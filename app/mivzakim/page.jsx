@@ -7,7 +7,9 @@ export default async function mivzakim() {
   // console.log("trr**********", data);
   //navlink => text
   return (
+    <div className={styles.continerAll}>
     <div className={styles.continer}>
+
       <div className={styles.hedear}>
       <img src="	https://www.now14.co.il/wp-content/themes/14-child/assets/logo14/logo-hi-mobile.svg" alt="14newsnew" />
       </div>
@@ -19,7 +21,7 @@ export default async function mivzakim() {
       {data &&
         data?.map((news, index) => {
           return <div key={index}>
-            <h2>{news.title}</h2>
+            <h3>{news.title}</h3>
             <details>
 
               <summary>
@@ -33,6 +35,6 @@ export default async function mivzakim() {
 
 
       }
-    </div>
+    </div></div>
   )
 }
