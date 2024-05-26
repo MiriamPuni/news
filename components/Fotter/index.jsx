@@ -1,15 +1,21 @@
 import Link from 'next/link'
 import styles from './style.module.scss'
+import NavLink from '../NavLink'
 
 export default function Footer() {
   const titlefooter = ["Live Broadcast", "Plans", "news", "Judaism", "Terms of Use", "Contact Us", "about", "needed", "magazine", "Published with us", "School of Communication", " documentary films"]
   return (
     <div className={styles.Footer}>
-      <div className={styles.imgs}>
-        <img src="https://www.now14.co.il/wp-content/themes/14-child/assets/icons/facebook-footer.svg" alt="" />
-        <img src="https://www.now14.co.il/wp-content/themes/14-child/assets/icons/youtube-footer.svg" alt="" />
-        <img src="https://www.now14.co.il/wp-content/themes/14-child/assets/icons/twitter-footer.svg" alt="" />
-        <img src="https://www.now14.co.il/wp-content/themes/14-child/assets/icons/instagram-footer.svg" alt="" />
+      <div className={styles.imgbutton}>
+        <div className={styles.imgs}>
+          <img src="https://www.now14.co.il/wp-content/themes/14-child/assets/icons/facebook-footer.svg" alt="" />
+          <img src="https://www.now14.co.il/wp-content/themes/14-child/assets/icons/youtube-footer.svg" alt="" />
+          <img src="https://www.now14.co.il/wp-content/themes/14-child/assets/icons/twitter-footer.svg" alt="" />
+          <img src="https://www.now14.co.il/wp-content/themes/14-child/assets/icons/instagram-footer.svg" alt="" />
+        </div>
+        <NavLink href={'/AddArticle'} text={
+          <div className={styles.button}>+ Add Article</div>
+        } />
       </div>
       <div className={styles.titlefooter}>
         {titlefooter.map((item) =>

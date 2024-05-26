@@ -25,9 +25,9 @@ export default async function page() {
         )}
       </div>
       <div className='mivzakim'>
-        <Suspense fallback={<div>loading</div>}>
+        {/* <Suspense fallback={<div>loading</div>}>
           <Mivzakim />
-        </Suspense>
+        </Suspense> */}
       </div>
     </div>
   )

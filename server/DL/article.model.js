@@ -5,21 +5,17 @@ const contentSchema = new mongoose.Schema({
         type: String,
         enum: ['title', 'text', 'img'],
         default: 'text',
-        required: true,
     },
     fill: {
         type: String,
-        required: true,
     }
 })
 const commentsSchema = new mongoose.Schema({
     content: {
         type: String,
-        required: true,
     },
     title: {
         type: String,
-        required: true,
     },
     user: {
         type: mongoose.Schema.Types.ObjectId,
@@ -61,9 +57,7 @@ const articelSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Category'
     },
-    content: [{
-        contentSchema
-    }],
+    content: [contentSchema],
     slug: {
         type: String,
         required: true,
@@ -73,7 +67,7 @@ const articelSchema = new mongoose.Schema({
         type: Number,
         default: 0
     },
-    comments: { commentsSchema }
+    comments: [ commentsSchema ]
 });
 
 

@@ -33,3 +33,24 @@
     display: flex;
     gap: 15px;
 }
+
+.button{
+    background-color: rgba(225, 95, 95, 0.564);
+    width: 100px;
+    padding: 5px 2px;
+    border-radius: 40px;
+    margin: 20px 0 0 0;
+    text-align: center;
+    font-size: 10px;
+}
+.button:hover{
+    background-color: rgba(225, 95, 95, 0.285);
+
+}
+
+.imgbutton{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
