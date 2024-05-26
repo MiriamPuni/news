@@ -6,7 +6,7 @@
 //             {
 //                 protocol: 'https',
 //                 hostname: 'cdn.pixabay.com'
-                
+
 //             }
 //         ]
 //     }
@@ -31,27 +31,29 @@ const nextConfig = {
                 hostname: "www.now14.co.il"
             },
             {
-                  protocol: 'https',
+                protocol: 'https',
                 hostname: 'example.com'
-            },{
-    protocol: 'https',
+            }, 
+            {
+                protocol: 'https',
                 hostname: 'nextjs.org'
-            },{
+            }, 
+            {
 
                 protocol: 'https',
-                hostname: 'encrypted-tbn0.gstatic.com'
+                hostname: 'a7.org'
             }
         ],
-    
 
 
-        domains: ['example.com', 'https://nextjs.org/','encrypted-tbn0.gstatic.com','mivzakim-icon.svg'],
-      },
-              
-           
-        
-    }
 
-    // domains: ['example.com', 'https://nextjs.org/', 'encrypted-tbn0.gstatic.com'],
+        domains: ['example.com', 'https://nextjs.org/', 'encrypted-tbn0.gstatic.com', 'mivzakim-icon.svg'],
+    },
+
+
+
+}
+
+// domains: ['example.com', 'https://nextjs.org/', 'encrypted-tbn0.gstatic.com'],
 
 export default nextConfig;
