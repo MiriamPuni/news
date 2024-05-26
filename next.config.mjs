@@ -19,42 +19,43 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "cdn.pixabay.com",
-      },
-      {
-        hostname: "www.now14.co.il",
-      },
-      {
-        protocol: "https",
-        hostname: "example.com",
-      },
-      {
-        protocol: "https",
-        hostname: "nextjs.org",
-      },
-      {
-        protocol: "https",
-        hostname: "encrypted-tbn0.gstatic.com",
-      },
-      {
-        protocol: "https",
-        hostname: "a7.org",
-      },
-    ],
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: 'cdn.pixabay.com'
+            },
+            {
+                hostname: "www.now14.co.il"
+            },
+            {
+                protocol: 'https',
+                hostname: 'example.com'
+            }, 
+            {
+                protocol: 'https',
+                hostname: 'nextjs.org'
+            }, 
+            {
 
-    domains: [
-      "example.com",
-      "https://nextjs.org/",
-      "encrypted-tbn0.gstatic.com",
-      "mivzakim-icon.svg",
-      "a7.org"
-    ],
-  },
-};
+                protocol: 'https',
+                hostname: 'encrypted-tbn0.gstatic.com'
+            },
+            {
+
+                protocol: 'https',
+                hostname: 'a7.org'
+            }
+        ],
+
+
+
+        domains: ['example.com', 'https://nextjs.org/', 'encrypted-tbn0.gstatic.com', 'mivzakim-icon.svg'],
+    },
+
+
+
+}
 
 // domains: ['example.com', 'https://nextjs.org/', 'encrypted-tbn0.gstatic.com'],
 

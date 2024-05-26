@@ -2,7 +2,7 @@
 'use client';
 import React, { useState } from 'react';
 import styles from './style.module.scss';
-import createAdmin from '@/server/actions/admin.action';
+import createAdmin, { loginAdmin } from '@/server/actions/admin.action';
 import { IoIosArrowDown } from "react-icons/io";
 import { IoIosArrowUp } from "react-icons/io";
 
@@ -18,7 +18,7 @@ export default function LoginAdmin() {
     <div className={styles.container}>
       {!showSignUpForm && (<div className={styles.login}>
         <h3>התחברות</h3>
-        <form>
+        <form action={loginAdmin}>
           <label htmlFor="username">שם המשתמש</label>
           <input type="text" name="username" placeholder="שם משתמש" />
           <label htmlFor="password">סיסמא</label>

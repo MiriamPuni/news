@@ -86,11 +86,11 @@ export default function Article({ params }) {
           })}
         </div>
       </div>
-      <div className={styles.mivzakim}>
+      {/* <div className={styles.mivzakim}>
         <Suspense fallback={<div>loading</div>}>
           <Mivzakim />
         </Suspense>
-      </div>
+      </div> */}
     </div>
   );
 }
